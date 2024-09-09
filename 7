@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Taxi{
+    private:
+        int taxiNumber;
+        string driverName;
+        string route;
+    public:
+        void set(int a, string b, string c){
+            taxiNumber=a;
+            driverName=b;
+            route=c;
+        }
+        void rec(){
+            cout<<taxiNumber<<" : "<<driverName<<" : "<<route;
+            
+        }
+};
+
+
+int main(){
+    Taxi obj;
+    obj.set(7873,"sadam","kashmir_to_manali");
+    obj.rec();
+    
+    return 0;
+}

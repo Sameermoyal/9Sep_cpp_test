@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct Doctor {
+    
+    int id;
+    string spec;
+    int p[7];
+    int total(){
+        int k=0;
+        for(int i=0;i<7;i++){
+            k+=p[i];
+        }
+        return k;
+    }
+};
+
+
+int main(){
+    int n;
+    cin>>n;
+    
+    Doctor obj[n];
+    for(int i =0;i<n;i++){
+        cout<<"enter doctor id"<<endl;
+        cin>>obj[i].id;
+        cout<<"enter specialization"<<endl;
+        cin>>obj[i].spec;
+        cout<<"enter patient per day"<<endl;
+        for(int j=0;j<7;j++){
+            cin>>obj[i].p[j];
+        }
+    }
+    
+    int maxi=0;
+    int id;
+    
+    for (int i = 0; i <n; i++) {
+        if(maxi<obj[i].total()){
+            maxi=obj[i].total();
+            id=obj[i].id;
+        }
+    }
+    
+    cout<<id;
+    
+    return 0;
+}

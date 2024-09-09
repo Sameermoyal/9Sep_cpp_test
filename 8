@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Firefighter{
+    private:
+        string name;
+        string station;
+        int yearsofservice;
+    public:
+        void set(string a, string b, int c){
+            name=a;
+            station=b;
+            yearsofservice=c;
+        }
+        void get(){
+            cout<<name<<" : "<<station<<" : "<<yearsofservice;
+            
+        }
+};
+
+
+int main(){
+    Firefighter obj;
+    obj.set("ajay", "jaipur", 15);
+    obj.get();
+    
+    return 0;
+}

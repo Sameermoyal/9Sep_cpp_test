@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct GroceryStore {
+    
+    string name;
+    string location;
+    int price[5];
+    int revenue(){
+        int k=0;
+        for(int i=0;i<5;i++){
+            k+=price[i];
+        }
+        return k;
+    }
+};
+
+
+int main(){
+    int n;
+    cin>>n;
+    
+    GroceryStore obj[n];
+    for(int i =0;i<n;i++){
+        cout<<"enter grocery store name"<<endl;
+        cin>>obj[i].name;
+        cout<<"enter gro. Store location"<<endl;
+        cin>>obj[i].location;
+        cout<<"enter price of item"<<endl;
+        
+        for(int j=0;j<5;j++){
+            cin>>obj[i].prices[j];
+        }
+    }
+    
+    int total=0;
+    
+    for (int i = 0; i <n; i++) {
+        total += obj[i].revenue();
+    }
+    
+    cout<<total;
+    
+    return 0;
+}
